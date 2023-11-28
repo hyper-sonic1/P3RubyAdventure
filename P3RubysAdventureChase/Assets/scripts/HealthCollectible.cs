@@ -9,7 +9,7 @@ public class HealthCollectable : MonoBehaviour
         RubyController controller = other.GetComponent<RubyController>();
         if (controller != null)
         {
-            controller.ChangeHealth(1);
+            global::System.Object value = controller.ChangeHealth(1);
             Destroy(gameObject);
         }
                 
