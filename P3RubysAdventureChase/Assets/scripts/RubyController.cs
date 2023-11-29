@@ -6,10 +6,7 @@ using UnityEngine;
 public class RubyController : MonoBehaviour
 {
     public float speed = 3.0f;
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
     public int maxHealth = 5;
     public float timeInvincible = 2;
     public int health { get { return currentHealth; } }
@@ -27,10 +24,7 @@ public class RubyController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-<<<<<<< Updated upstream
-     
-=======
->>>>>>> Stashed changes
+
     }
         // Update is called once per frame
         void Update()
@@ -38,9 +32,9 @@ public class RubyController : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
 
-            if (isInvincible);
+            if (isInvincible)
             {
-                invincibleTimer -= Timer.deltaTime;
+                invincibleTimer -= Time.deltaTime;
             }
 
 
@@ -55,11 +49,10 @@ public class RubyController : MonoBehaviour
         }
 
 
-<<<<<<< Updated upstream
+
+
         public void ChangeHealth(int amount)
-=======
-        void ChangeHealth(int amount)
->>>>>>> Stashed changes
+
         {
             currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
             Debug.Log(currentHealth + "/" + maxHealth);
