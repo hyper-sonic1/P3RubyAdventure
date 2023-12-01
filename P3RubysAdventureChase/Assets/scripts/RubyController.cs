@@ -63,8 +63,8 @@ public class RubyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = transform.position;
-        position.x = position.x + speed * horizontal;
-        position.y = position.y + speed * vertical;
+        position.x = position.x + speed * horizontal * Time.deltaTime;
+        position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
     }
